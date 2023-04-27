@@ -39,14 +39,25 @@ public class XxxController implements Initializable {
 
     @FXML
     private void convertBtnHandel(ActionEvent event) {
-        if (!isEmptyText(usdTextfeild)) {
-            float usd = Float.valueOf(usdTextfeild.getText());
-            usd *= 3.6;
-            nisTextfeild.setText(Float.toString(usd));
-        } else if (isEmptyText(nisTextfeild)) {
-            float nis = Float.valueOf(nisTextfeild.getText());
-            nis /= 3.6;
-            usdTextfeild.setText(Float.toString(nis));
+//         if (!isEmptyText(usdTextfeild)) {
+//             float usd = Float.valueOf(usdTextfeild.getText());
+//             usd *= 3.6;
+//             nisTextfeild.setText(Float.toString(usd));
+//         } else if (isEmptyText(nisTextfeild)) {
+//             float nis = Float.valueOf(nisTextfeild.getText());
+//             nis /= 3.6;
+//             usdTextfeild.setText(Float.toString(nis));
+//         }
+        //---------------------------------------كود أخر افضل--------------------
+         if (nisTextfeild.getText() != null &&
+                (usdTextfeild.getText().equals("") || usdTextfeild.getText().equalsIgnoreCase(" "))){
+            double value = Double.parseDouble(nisTextfeild.getText());
+            usdTextfeild.setText(String.format("%.2f", (value/3.45)));
+        }
+        else if (usdTextfeild.getText() != null &&
+                (nisTextfeild.getText().equals("") || nisTextfeild.getText().equalsIgnoreCase(" "))) {
+            double value = Double.parseDouble(usdTextfeild.getText());
+            nisTextfeild.setText(String.format("%.2f", (value*3.45)));
         }
 
     }
