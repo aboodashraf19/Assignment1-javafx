@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="686.0" prefWidth="435.0" style="-fx-background-color: #c8c8c8;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.pkg1.FXMLDocumentController">
+    <children>
+        <Label layoutX="164.0" layoutY="301.0" prefHeight="35.0" prefWidth="118.0" text="User Name">
+            <font>
+                <Font name="System Bold" size="19.0" />
+            </font>
+        </Label>
+        <Label layoutX="166.0" layoutY="410.0" prefHeight="35.0" prefWidth="106.0" text="Password">
+            <font>
+                <Font name="System Bold" size="19.0" />
+            </font>
+        </Label>
+        <TextField fx:id="textFeildUserName" layoutX="93.0" layoutY="343.0" prefHeight="47.0" prefWidth="252.0" />
+        <TextField fx:id="textFeildPassword" layoutX="94.0" layoutY="454.0" prefHeight="47.0" prefWidth="252.0" />
+        <Button fx:id="buttonLogin" layoutX="155.0" layoutY="552.0" mnemonicParsing="false" onAction="#btnHandel" prefHeight="47.0" prefWidth="118.0" style="-fx-background-color: blue;" text="Login" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Button>
+        <ImageView fitHeight="180.0" fitWidth="232.0" layoutX="137.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../../../Desktop/Login-logo.png" />
+            </image>
+            
+        </ImageView>
+    </children>
+</AnchorPane>
